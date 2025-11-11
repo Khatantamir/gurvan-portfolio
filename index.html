@@ -3,78 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Marketing Performance Dashboard Specialist</title>
+<title>ClinicBoost – Data-Driven Growth Dashboards</title>
 
-<!-- Optional favicon (хүсвэл assets/logo-32.png байршуулаад идэвхжүүл) -->
-<link rel="icon" type="image/png" href="assets/logo-32.png">
+<link rel="icon" type="image/png" href="assets/logo.png">
 
 <style>
-  /* ----- Base ----- */
-  :root{
-    --bg:#0b1220;
-    --card:#0f1a33;
-    --border:#203153;
-    --ink:#eaf2ff;
-    --muted:#9db2d6;
-    --chip:#274071;
-    --primary:#3b82f6;
-  }
-  html,body{height:100%}
-  body{margin:0;background:var(--bg);color:var(--ink);
-       font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Arial;
-       scroll-behavior:smooth; scroll-padding-top:80px;} /* sticky header offset */
+:root{
+  --bg:#0b1220;
+  --card:#0f1a33;
+  --border:#203153;
+  --ink:#eaf2ff;
+  --muted:#9db2d6;
+  --chip:#274071;
+  --primary:#3b82f6;
+}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.6 -apple-system,Segoe UI,Inter,Roboto,Arial;
+  scroll-behavior:smooth;
+}
 
-  /* ----- Header ----- */
-  .site-header{
-    position:sticky; top:0; z-index:50;
-    background:rgba(11,18,32,.8);
-    backdrop-filter:saturate(140%) blur(6px);
-    border-bottom:1px solid rgba(255,255,255,.06);
-  }
-  .site-header .container{
-    max-width:1100px; margin:auto; padding:14px 20px;
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-  }
-  .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
-  .brand img{height:36px; width:auto; display:block;}
-  .brand span{color:var(--ink); font-weight:700; letter-spacing:.5px}
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(11,18,32,.85);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.site-header .container{
+  max-width:1100px;margin:auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;text-decoration:none;
+}
+.brand img{height:36px;}
+.brand span{color:var(--ink);font-weight:700;letter-spacing:.5px;}
+.nav{display:flex;gap:18px;align-items:center;}
+.nav a{text-decoration:none;color:var(--muted);font-weight:500;}
+.nav a:hover{color:var(--ink);}
+.nav .btn{
+  padding:8px 12px;border-radius:10px;background:var(--primary);color:#fff !important;
+}
 
-  .nav{display:flex; gap:18px; align-items:center;}
-  .nav a{color:var(--muted); text-decoration:none; font-weight:500}
-  .nav a:hover{color:var(--ink)}
-  .nav .btn{
-    padding:8px 12px; border-radius:10px; background:var(--primary); color:#fff !important;
-  }
-  @media (max-width:720px){
-    .brand span{display:none;}            /* утсан дээр текстгүй зөвхөн лого */
-    .nav a:not(.btn){display:none;}       /* утсан дээр зөвхөн Contact товч */
-  }
+/* Mobile */
+@media(max-width:720px){
+  .brand span{display:none;}
+  .nav a:not(.btn){display:none;}
+}
 
-  /* ----- Main content (таны одоогийнх) ----- */
-  .wrap{max-width:900px;margin:0 auto;padding:28px 20px}
-  h1{font-size:36px;margin:8px 0 0}
-  h2{font-size:20px;margin:10px 0 14px}
-  .card{background:var(--card);border:1px solid var(--border);
-        border-radius:14px;padding:18px;margin:14px 0}
-  a.btn{display:inline-block;margin:8px 8px 0 0;padding:10px 14px;background:var(--primary);color:#fff;
-        text-decoration:none;border-radius:10px;font-weight:600}
-  .small{color:var(--muted)}
-  .badges span{display:inline-block;padding:6px 10px;border:1px solid var(--chip);
-               border-radius:999px;margin:6px 6px 0 0;color:#cfe0ff}
+/* Content */
+.wrap{max-width:900px;margin:auto;padding:28px 20px;}
+h1{font-size:36px;margin:8px 0 0;}
+h2{font-size:20px;margin:10px 0 14px;}
+.card{
+  background:var(--card);border:1px solid var(--border);
+  padding:18px;border-radius:14px;margin:14px 0;
+}
+a.btn{
+  display:inline-block;margin-top:8px;padding:10px 14px;background:var(--primary);
+  color:#fff!important;border-radius:10px;font-weight:600;text-decoration:none;
+}
+.small{color:var(--muted);}
+.badges span{
+  display:inline-block;padding:6px 10px;border:1px solid var(--chip);
+  border-radius:999px;margin:6px 6px 0 0;color:#cfe0ff;
+}
 </style>
 </head>
 
 <body>
 
-<!-- ===== Header with logo & nav ===== -->
-<header class="site-header" aria-label="Site header">
+<header class="site-header">
   <div class="container">
-    <a href="/" class="brand" aria-label="Clinic Boost home">
-      <!-- Лого файлаа assets/logo.png гэж байршуулна -->
-      <img src="assets/logo.png" alt="Clinic Boost logo">
-      <span>Clinic Boost</span>
+    <a href="/" class="brand">
+      <img src="assets/logo.png" alt="ClinicBoost Logo">
+      <span>ClinicBoost</span>
     </a>
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav">
       <a href="#demo">Demo</a>
       <a href="#kpi">KPI Sheets</a>
       <a href="#pricing">Pricing</a>
@@ -82,12 +88,11 @@
     </nav>
   </div>
 </header>
-<!-- ===== /Header ===== -->
 
 <div class="wrap">
+
   <h1>I Build ROAS-Focused Marketing Dashboards</h1>
   <h2>I combine Facebook + Google Ads + CRM data into one clear revenue dashboard.</h2>
-
   <p class="small">No more guessing which ads work. See your spend → clicks → leads → sales → revenue clearly.</p>
 
   <div class="badges">
@@ -97,21 +102,19 @@
 
   <section id="demo" class="card">
     <h2>Portfolio Demo (PDF)</h2>
-    <a class="btn" href="Marketing_Dashboard_Quick.pdf" target="_blank" rel="noopener">Open PDF</a>
+    <a class="btn" href="Marketing_Dashboard_Quick.pdf" target="_blank">Open PDF</a>
   </section>
 
   <section id="kpi" class="card">
     <h2>KPI & Data Sheets (Excel)</h2>
-    <a class="btn" href="marketing_dashboard_summary.xlsx" target="_blank" rel="noopener">Download XLSX</a>
+    <a class="btn" href="marketing_dashboard_summary.xlsx" target="_blank">Download XLSX</a>
   </section>
 
   <section id="pricing" class="card">
     <h2>Pricing</h2>
     <p class="small">
-      <strong>Starter – $149</strong><br> Facebook Ads only dashboard
-      <br><br>
-      <strong>Growth – $299</strong><br> Facebook + Google Ads dashboards
-      <br><br>
+      <strong>Starter – $149</strong><br> Facebook Ads only dashboard<br><br>
+      <strong>Growth – $299</strong><br> Facebook + Google Ads dashboards<br><br>
       <strong>Pro – $499</strong><br> FB + Google + CRM full revenue pipeline & ROAS insights
     </p>
   </section>
@@ -123,8 +126,10 @@
       WhatsApp / Phone: +97686608680
     </p>
   </section>
+
 </div>
 </body>
 </html>
+
 
 
