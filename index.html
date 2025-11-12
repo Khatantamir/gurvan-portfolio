@@ -1,134 +1,173 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ClinicBoost – Data-Driven Growth Dashboards</title>
-  <meta name="description" content="I build ROAS-focused marketing dashboards that combine Facebook + Google Ads + CRM data into one clear revenue view.">
-
-  <!-- ✅ Corrected Favicon and Logo Path -->
-  <link rel="icon" type="image/png" href="/assets/logo.png">
-  <link rel="preload" as="image" href="/assets/logo.png" fetchpriority="high">
+  <meta name="description" content="ROAS-focused dashboards that combine Facebook + Google Ads + CRM into one clear revenue view.">
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preload" as="image" href="assets/logo.png" fetchpriority="high" />
+  <meta property="og:title" content="ClinicBoost – ROAS Dashboards" />
+  <meta property="og:description" content="See spend → clicks → leads → sales → revenue clearly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://clinicboost.pro" />
 
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#0f1a33;
-      --border:#203153;
-      --ink:#eaf2ff;
-      --muted:#9db2d6;
-      --chip:#274071;
-      --primary:#3b82f6;
+      --bg:#0b1220;--card:#0f1a33;--border:#203153;--ink:#eaf2ff;
+      --muted:#9db2d6;--chip:#274071;--primary:#3b82f6;--ok:#22c55e;
     }
+    *{box-sizing:border-box}
     html,body{height:100%}
-    body{
-      margin:0;background:var(--bg);color:var(--ink);
-      font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Arial,sans-serif;
-      scroll-behavior:smooth;
-    }
+    body{margin:0;background:var(--bg);color:var(--ink);
+      font:16px/1.6 -apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Arial,sans-serif}
+    a{color:inherit}
 
     /* Header */
-    .site-header{
-      position:sticky; top:0; z-index:50;
-      background:rgba(11,18,32,.85);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .site-header .container{
-      max-width:1100px;margin:auto;padding:14px 20px;
-      display:flex;align-items:center;justify-content:space-between;gap:16px;
-    }
+    .header{position:sticky;top:0;z-index:40;background:rgba(11,18,32,.9);
+      backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .container{max-width:1100px;margin:auto;padding:14px 20px;display:flex;gap:16px;align-items:center;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
     .brand img{height:40px;width:auto;display:block}
-    .brand span{color:var(--ink);font-weight:700;letter-spacing:.5px}
-    nav[aria-label="Primary"]{display:flex;gap:18px;align-items:center}
-    nav[aria-label="Primary"] a{color:var(--muted);text-decoration:none;font-weight:500}
-    nav[aria-label="Primary"] a:hover{color:var(--ink)}
-    .btn{padding:8px 12px;border-radius:10px;background:var(--primary);color:#fff!important}
+    .brand span{font-weight:700;letter-spacing:.4px}
+    .nav{display:flex;gap:18px;align-items:center}
+    .nav a{color:var(--muted);text-decoration:none;font-weight:500}
+    .nav a:hover{color:var(--ink)}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;background:var(--primary);color:#fff;text-decoration:none;font-weight:600}
+    .btn-lite{background:#1b2a4f}
+    .badge{display:inline-block;padding:6px 10px;border:1px solid var(--chip);border-radius:999px;margin:6px 6px 0 0;color:#cfe0ff}
 
-    /* Mobile */
-    @media (max-width:720px){
-      .brand span{display:none}                 /* phone: зөвхөн лого үзүүлнэ */
-      nav[aria-label="Primary"] a:not(.btn){display:none}  /* phone: Contact товч үлдээнэ */
-    }
+    /* Hero */
+    .wrap{max-width:1100px;margin:auto;padding:28px 20px}
+    .hero h1{font-size:42px;line-height:1.2;margin:16px 0 10px}
+    .hero p{color:var(--muted);margin:0 0 14px}
+    .stack{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 22px}
 
-    /* Content */
-    .wrap{max-width:900px;margin:auto;padding:28px 20px}
-    h1{font-size:36px;margin:8px 0 0}
-    h2{font-size:20px;margin:10px 0 14px}
-    .card{
-      background:var(--card);border:1px solid var(--border);
-      padding:18px;border-radius:14px;margin:14px 0
-    }
-    a.btn{
-      display:inline-block;margin-top:8px;padding:10px 14px;background:var(--primary);
-      color:#fff!important;border-radius:10px;font-weight:600;text-decoration:none
-    }
+    /* Cards / sections */
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin:16px 0}
+    .card h2{margin:0 0 10px;font-size:22px}
     .small{color:var(--muted)}
-    .badges span{
-      display:inline-block;padding:6px 10px;border:1px solid var(--chip);
-      border-radius:999px;margin:6px 6px 0 0;color:#cfe0ff
+
+    /* Pricing */
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .price{font-size:28px;font-weight:800;margin:6px 0}
+    .ok{color:var(--ok)}
+    .mut{color:var(--muted)}
+    .li{display:flex;gap:8px;align-items:flex-start;margin:6px 0}
+    .li:before{content:"✓";color:var(--ok)}
+
+    /* Contact form */
+    form .row{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:720px){.nav a:not(.btn){display:none}.brand span{display:none}
+      .grid{grid-template-columns:1fr} form .row{grid-template-columns:1fr}
+      .hero h1{font-size:32px}
     }
+    input,textarea{width:100%;padding:12px 12px;border-radius:10px;border:1px solid var(--border);background:#0c1733;color:var(--ink)}
+    input::placeholder,textarea::placeholder{color:#89a0c7}
+    .foot{border-top:1px solid rgba(255,255,255,.06);margin-top:24px}
+    .foot .container{padding:18px 20px;display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap}
+    .x{opacity:.7}
   </style>
 </head>
 
 <body>
+
   <!-- Header -->
-  <header class="site-header">
+  <header class="header">
     <div class="container">
-      <a href="/" class="brand" aria-label="ClinicBoost home">
-        <!-- ✅ Fixed path to logo -->
-        <img src="/assets/logo.png" alt="ClinicBoost Logo" decoding="async">
+      <a class="brand" href="/" aria-label="ClinicBoost">
+        <img src="assets/logo.png" alt="ClinicBoost logo" decoding="async" />
         <span>ClinicBoost</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#demo">Demo</a>
-        <a href="#kpi">KPI Sheets</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact" class="btn">Contact</a>
+        <a href="#demo">Demo</a><a href="#kpi">KPI Sheets</a><a href="#pricing">Pricing</a>
+        <a class="btn" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main -->
-  <div class="wrap">
+  <!-- Hero -->
+  <main class="wrap hero">
     <h1>I Build ROAS-Focused Marketing Dashboards</h1>
-    <h2>I combine Facebook + Google Ads + CRM data into one clear revenue dashboard.</h2>
+    <p>I combine Facebook + Google Ads + CRM data into one clear revenue dashboard.</p>
     <p class="small">No more guessing which ads work. See your spend → clicks → leads → sales → revenue clearly.</p>
-
-    <div class="badges" aria-label="Skills">
-      <span>Power BI</span><span>Facebook Ads</span><span>Google Ads</span>
-      <span>CRM Integration</span><span>ROAS / CAC / CTR / CPC</span>
+    <div class="stack" aria-label="Skills">
+      <span class="badge">Power BI</span><span class="badge">Facebook Ads</span><span class="badge">Google Ads</span>
+      <span class="badge">CRM Integration</span><span class="badge">ROAS / CAC / CTR / CPC</span>
     </div>
 
+    <!-- Demos -->
     <section id="demo" class="card" aria-labelledby="demo-title">
       <h2 id="demo-title">Portfolio Demo (PDF)</h2>
       <a class="btn" href="Marketing_Dashboard_Quick.pdf" target="_blank" rel="noopener">Open PDF</a>
+      <a class="btn btn-lite" href="marketing_dashboard_summary.xlsx" target="_blank" rel="noopener" style="margin-left:8px">Download XLSX</a>
     </section>
 
-    <section id="kpi" class="card" aria-labelledby="kpi-title">
-      <h2 id="kpi-title">KPI & Data Sheets (Excel)</h2>
-      <a class="btn" href="marketing_dashboard_summary.xlsx" target="_blank" rel="noopener">Download XLSX</a>
+    <!-- Pricing -->
+    <section id="pricing" class="card" aria-labelledby="price-title">
+      <h2 id="price-title">Pricing</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Starter</h3>
+          <div class="price">$149</div>
+          <div class="li">Facebook Ads dashboard</div>
+          <div class="li">ROAS / CTR / CPC widgets</div>
+          <div class="li">Delivery in 24h</div>
+          <a class="btn" href="https://buy.stripe.com/test_STARTER_REPLACE" target="_blank" rel="noopener">Buy Starter</a>
+        </div>
+        <div class="card">
+          <h3>Growth</h3>
+          <div class="price">$299</div>
+          <div class="li">Facebook + Google Ads dashboards</div>
+          <div class="li">Auto-refresh & share links</div>
+          <div class="li">Done-for-you setup</div>
+          <a class="btn" href="https://buy.stripe.com/test_GROWTH_REPLACE" target="_blank" rel="noopener">Buy Growth</a>
+        </div>
+        <div class="card">
+          <h3>Pro</h3>
+          <div class="price">$499</div>
+          <div class="li">FB + Google + CRM integration</div>
+          <div class="li">Full revenue pipeline & ROAS insights</div>
+          <div class="li">Priority support</div>
+          <a class="btn" href="https://buy.stripe.com/test_PRO_REPLACE" target="_blank" rel="noopener">Buy Pro</a>
+        </div>
+      </div>
+      <p class="small mut">Need custom metrics or Looker Studio? <a href="#contact" class="ok">Contact me</a>.</p>
     </section>
 
-    <section id="pricing" class="card" aria-labelledby="pricing-title">
-      <h2 id="pricing-title">Pricing</h2>
-      <p class="small">
-        <strong>Starter – $149</strong><br> Facebook Ads only dashboard<br><br>
-        <strong>Growth – $299</strong><br> Facebook + Google Ads dashboards<br><br>
-        <strong>Pro – $499</strong><br> FB + Google + CRM full revenue pipeline & ROAS insights
-      </p>
-    </section>
-
+    <!-- Contact -->
     <section id="contact" class="card" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
-      <p class="small">
-        Email: <a href="mailto:hhatnaa690@gmail.com">hhatnaa690@gmail.com</a><br>
-        WhatsApp / Phone: +97686608680
-      </p>
+      <!-- Netlify Forms -->
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+        <div class="row">
+          <p><label>Name<br><input name="name" required placeholder="Your name"></label></p>
+          <p><label>Email<br><input type="email" name="email" required placeholder="you@example.com"></label></p>
+        </div>
+        <p><label>Message<br><textarea name="message" rows="5" required placeholder="Tell me about your dashboard needs..."></textarea></label></p>
+        <p style="display:flex;gap:10px;align-items:center">
+          <button class="btn" type="submit">Send Message</button>
+          <a class="btn btn-lite" href="https://wa.me/97686608680?text=Hi%20ClinicBoost%2C%20I%27m%20interested%20in%20a%20ROAS%20dashboard." target="_blank" rel="noopener">WhatsApp</a>
+        </p>
+        <p class="small">Or email: <a href="mailto:hhatnaa690@gmail.com">hhatnaa690@gmail.com</a></p>
+      </form>
     </section>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <div class="container x">
+      <div>© <span id="y"></span> ClinicBoost • All rights reserved</div>
+      <div>Ulaanbaatar, Mongolia • <a href="mailto:hhatnaa690@gmail.com">hhatnaa690@gmail.com</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+
 
 
