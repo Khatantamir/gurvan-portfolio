@@ -1,0 +1,16 @@
+{
+  "rows": 540,
+  "missing_by_col": {
+    "date": 0,
+    "channel": 0,
+    "spend": 0,
+    "impressions": 0,
+    "clicks": 0,
+    "leads": 0,
+    "sales": 0,
+    "revenue": 0
+  },
+  "duplicate_rows": 0,
+  "negative_spend": 0,
+  "negative_revenue": 0
+}
