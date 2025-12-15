@@ -1,109 +1,74 @@
-# Automated Marketing Performance Data Pipeline
+# Marketing Performance Analytics Dashboard (Portfolio)
 
 ## Overview
-This project presents a **fully automated marketing analytics data pipeline** designed to track campaign performance, compute key business KPIs, and generate visual reports.
+This repository presents a **marketing performance analytics dashboard** built as a portfolio project.  
+The dashboard focuses on tracking key marketing KPIs such as **ROAS, CTR, CPC, and revenue trends** using structured datasets and visual reporting.
 
-The entire workflow is automated using **GitHub Actions**, demonstrating real-world data engineering, analytics automation, and CI/CD best practices.
-
----
-
-## Problem
-Marketing teams frequently face challenges such as:
-- Identifying which channels generate the highest value
-- Understanding how advertising spend translates into revenue
-- Tracking performance trends consistently over time
-
-Traditional manual reporting processes are time-consuming, error-prone, and difficult to scale.
+The project demonstrates practical analytics skills in **Power BI**, KPI design, and performance reporting using reproducible workflows.
 
 ---
 
-## Solution
-This project automates the **end-to-end marketing analytics lifecycle**:
+## Project Goal
+Marketing teams often need a clear view of:
+- Which channels perform best
+- How spend relates to outcomes
+- How performance trends change over time
 
-1. Generate raw marketing funnel data  
-2. Transform raw data into clean, structured KPI tables  
-3. Produce visual performance reports  
-4. Automatically commit outputs using CI/CD automation  
-
-All steps run **on demand or on a scheduled basis** via GitHub Actions, ensuring reproducibility and reliability.
+This project consolidates key performance metrics into a **single analytics dashboard** to support data-driven evaluation and reporting.
 
 ---
 
-## Automated Workflow (CI/CD)
-The pipeline is executed using **GitHub Actions**, enabling hands-free analytics automation.
-
-### Workflow Capabilities
-- Manual trigger support (`workflow_dispatch`)
-- Scheduled weekly execution
-- Automatic version-controlled commits of generated outputs
-
-### Pipeline Steps
-- `fetch_data.py` → Generates raw marketing funnel data  
-- `transform.py` → Computes KPIs such as CTR, Conversion Rate, and ROAS  
-- `make_charts.py` → Creates charts and visual performance reports  
+## Dashboard Features
+- Multi-channel performance overview  
+- ROAS, CTR, CPC, and revenue metrics  
+- Channel-level comparison visuals  
+- KPI trend analysis over time  
 
 ---
 
-## Output Artifacts
-Each pipeline execution produces the following artifacts:
+## Dashboard Preview
 
-- **Raw datasets** stored in `data/raw/`  
-- **Processed KPI tables** stored in `data/processed/`  
-- **Visual reports** stored in `reports/`  
-
-All outputs are **automatically committed** back to the repository by the workflow, ensuring full traceability.
+![Overview](assets/overview.png)
+![Channel Comparison](assets/channels.png)
+![KPI Trends](assets/kpi_trends.png)
 
 ---
 
-## Sample Visual Outputs
-*(Generated automatically by the pipeline)*
-
-![Marketing Spend Over Time](reports/spend_over_time.png)
-![Revenue Over Time](reports/revenue_over_time.png)
-
-> Additional charts added to the `reports/` directory will automatically appear after each pipeline run.
+## Files in This Repository
+- `Marketing_Dashboard_Quick.pdf` – Static dashboard overview  
+- `marketing_dashboard_summary.xlsx` – KPI summary tables  
+- `index.html` – Web-based dashboard preview  
+- `assets/` – Dashboard screenshots and visuals  
 
 ---
 
-## Why This Matters
-This project demonstrates applied skills in:
-
-- Data engineering and analytics fundamentals  
-- CI/CD-driven automation for analytics workflows  
-- Reproducible and scalable data pipeline design  
-- Business-focused KPI measurement and reporting  
-
-Such systems are widely used in modern organizations to support marketing optimization and strategic decision-making.
+## Data Source & Privacy
+**Data Notice:**  
+This project uses **fully synthetic/mock marketing data** created for portfolio and demonstration purposes.  
+No real client, personal, or proprietary data is included.
 
 ---
 
-## National Importance Context (EB-NIW)
-Automated analytics pipelines like this reduce manual reporting effort, improve decision-making speed, and enable **data-driven resource allocation at scale**.
-
-These capabilities support productivity growth, operational efficiency, and economic competitiveness for small and mid-sized businesses—aligning with broader U.S. national interest objectives.
-
----
-
-## Tech Stack
-- Python (Pandas, Matplotlib)  
-- GitHub Actions (CI/CD)  
-- Automated data pipelines  
-- Marketing analytics KPIs  
+## Tools & Technologies
+- Power BI (DAX, Data Modeling, Visual Design)
+- Excel & Structured Datasets
+- Marketing KPIs (ROAS, CTR, CPC, Conversion Rate)
 
 ---
 
-## How to Run
-The pipeline can be executed in two ways:
-
-1. **Manually** via GitHub Actions → *Run workflow*  
-2. **Automatically** via scheduled weekly execution  
-
-No local setup is required.
+## How to View
+- Open `Marketing_Dashboard_Quick.pdf` for a static overview  
+- Review `marketing_dashboard_summary.xlsx` for KPI tables  
+- Open `index.html` or the GitHub Pages link for a web preview  
 
 ---
 
-## Project Status
-- ✅ Fully automated analytics pipeline  
-- ✅ CI/CD workflow verified and operational  
-- ✅ Data and reports generated automatically  
-- ✅ EB-NIW–ready project structure  
+## Live Preview (Optional)
+If enabled via GitHub Pages:
+
+🔗 https://khatantamir.github.io/gurvan-portfolio/
+
+---
+
+## Notes
+This project is intended as a **portfolio analytics dashboard** showcasing data analysis, KPI reporting, and visualization skills using structured datasets.
