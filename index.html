@@ -3,14 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ClinicBoost – Data-Driven Growth Dashboards</title>
-  <meta name="description" content="ROAS-focused dashboards that combine Facebook + Google Ads + CRM into one clear revenue view.">
+  <title>ClinicBoost – Marketing Analytics Dashboard (Portfolio Demo)</title>
+  <meta name="description" content="Portfolio demo: ROAS-focused marketing dashboard with synthetic data for KPI reporting and visualization.">
   <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="preload" as="image" href="assets/logo.png" fetchpriority="high" />
-  <meta property="og:title" content="ClinicBoost – ROAS Dashboards" />
-  <meta property="og:description" content="See spend → clicks → leads → sales → revenue clearly." />
+  <meta property="og:title" content="ClinicBoost – Portfolio Dashboard Demo" />
+  <meta property="og:description" content="Portfolio demo using synthetic data: spend → clicks → leads → sales → revenue." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://clinicboost.pro" />
+
+  <!-- OPTIONAL: If you enable GitHub Pages, set this to your Pages URL -->
+  <!-- <meta property="og:url" content="https://khatantamir.github.io/gurvan-portfolio/" /> -->
 
   <style>
     :root{
@@ -80,7 +82,8 @@
         <span>ClinicBoost</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#demo">Demo</a><a href="#kpi">KPI Sheets</a><a href="#pricing">Pricing</a>
+        <a href="#demo">Demo</a>
+        <a href="#pricing">Pricing</a>
         <a class="btn" href="#contact">Contact</a>
       </nav>
     </div>
@@ -88,24 +91,33 @@
 
   <!-- Hero -->
   <main class="wrap hero">
-    <h1>I Build ROAS-Focused Marketing Dashboards</h1>
-    <p>I combine Facebook + Google Ads + CRM data into one clear revenue dashboard.</p>
-    <p class="small">No more guessing which ads work. See your spend → clicks → leads → sales → revenue clearly.</p>
+    <h1>Marketing Performance Dashboard (Portfolio Demo)</h1>
+    <p>This page demonstrates a ROAS-focused dashboard using synthetic marketing data.</p>
+    <p class="small">No real client data is used. This is a portfolio demonstration only.</p>
+
     <div class="stack" aria-label="Skills">
-      <span class="badge">Power BI</span><span class="badge">Facebook Ads</span><span class="badge">Google Ads</span>
-      <span class="badge">CRM Integration</span><span class="badge">ROAS / CAC / CTR / CPC</span>
+      <span class="badge">Power BI</span>
+      <span class="badge">KPI Reporting</span>
+      <span class="badge">ROAS / CTR / CPC</span>
+      <span class="badge">Dashboard Design</span>
+      <span class="badge">Synthetic Demo Data</span>
     </div>
 
     <!-- Demos -->
     <section id="demo" class="card" aria-labelledby="demo-title">
-      <h2 id="demo-title">Portfolio Demo (PDF)</h2>
+      <h2 id="demo-title">Portfolio Demo Files</h2>
+      <p class="small mut">Open the demo files below to review the dashboard layout and KPI summaries.</p>
       <a class="btn" href="Marketing_Dashboard_Quick.pdf" target="_blank" rel="noopener">Open PDF</a>
       <a class="btn btn-lite" href="marketing_dashboard_summary.xlsx" target="_blank" rel="noopener" style="margin-left:8px">Download XLSX</a>
     </section>
 
-    <!-- Pricing -->
+    <!-- Pricing (Demo Only) -->
     <section id="pricing" class="card" aria-labelledby="price-title">
-      <h2 id="price-title">Pricing</h2>
+      <h2 id="price-title">Pricing (Demo Only)</h2>
+      <p class="small mut">
+        This section is included as a UI demonstration only. Pricing and purchase links are not active.
+      </p>
+
       <div class="grid">
         <div class="card">
           <h3>Starter</h3>
@@ -113,46 +125,54 @@
           <div class="li">Facebook Ads dashboard</div>
           <div class="li">ROAS / CTR / CPC widgets</div>
           <div class="li">Delivery in 24h</div>
-          <a class="btn" href="https://buy.stripe.com/test_STARTER_REPLACE" target="_blank" rel="noopener">Buy Starter</a>
+          <a class="btn btn-lite" href="#" onclick="return false;">Demo Only</a>
         </div>
+
         <div class="card">
           <h3>Growth</h3>
           <div class="price">$299</div>
           <div class="li">Facebook + Google Ads dashboards</div>
-          <div class="li">Auto-refresh & share links</div>
-          <div class="li">Done-for-you setup</div>
-          <a class="btn" href="https://buy.stripe.com/test_GROWTH_REPLACE" target="_blank" rel="noopener">Buy Growth</a>
+          <div class="li">Refresh-ready reporting layout</div>
+          <div class="li">Done-for-you setup (demo)</div>
+          <a class="btn btn-lite" href="#" onclick="return false;">Demo Only</a>
         </div>
+
         <div class="card">
           <h3>Pro</h3>
           <div class="price">$499</div>
-          <div class="li">FB + Google + CRM integration</div>
-          <div class="li">Full revenue pipeline & ROAS insights</div>
-          <div class="li">Priority support</div>
-          <a class="btn" href="https://buy.stripe.com/test_PRO_REPLACE" target="_blank" rel="noopener">Buy Pro</a>
+          <div class="li">Multi-source dashboard concept</div>
+          <div class="li">Full funnel KPI view (demo)</div>
+          <div class="li">Priority support (demo)</div>
+          <a class="btn btn-lite" href="#" onclick="return false;">Demo Only</a>
         </div>
       </div>
-      <p class="small mut">Need custom metrics or Looker Studio? <a href="#contact" class="ok">Contact me</a>.</p>
+
+      <p class="small mut">Want to discuss analytics dashboards? <a href="#contact" class="ok">Contact me</a>.</p>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="card" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact</h2>
+
       <!-- Netlify Forms -->
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <p style="display:none">
           <label>Don’t fill this out: <input name="bot-field" /></label>
         </p>
+
         <div class="row">
           <p><label>Name<br><input name="name" required placeholder="Your name"></label></p>
           <p><label>Email<br><input type="email" name="email" required placeholder="you@example.com"></label></p>
         </div>
+
         <p><label>Message<br><textarea name="message" rows="5" required placeholder="Tell me about your dashboard needs..."></textarea></label></p>
+
         <p style="display:flex;gap:10px;align-items:center">
           <button class="btn" type="submit">Send Message</button>
-          <a class="btn btn-lite" href="https://wa.me/97686608680?text=Hi%20ClinicBoost%2C%20I%27m%20interested%20in%20a%20ROAS%20dashboard." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-lite" href="https://wa.me/97686608680?text=Hi%20ClinicBoost%2C%20I%27m%20interested%20in%20a%20dashboard%20demo." target="_blank" rel="noopener">WhatsApp</a>
         </p>
+
         <p class="small">Or email: <a href="mailto:hhatnaa690@gmail.com">hhatnaa690@gmail.com</a></p>
       </form>
     </section>
@@ -161,13 +181,11 @@
   <!-- Footer -->
   <footer class="foot">
     <div class="container x">
-      <div>© <span id="y"></span> ClinicBoost • All rights reserved</div>
+      <div>© <span id="y"></span> ClinicBoost • Portfolio Demo</div>
       <div>Ulaanbaatar, Mongolia • <a href="mailto:hhatnaa690@gmail.com">hhatnaa690@gmail.com</a></div>
     </div>
   </footer>
+
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
-
-
