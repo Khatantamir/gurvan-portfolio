@@ -1,17 +1,17 @@
 # Marketing Performance Analytics Dashboard (Portfolio)
 
 ## Overview
-This repository presents a **marketing performance analytics dashboard** built as a portfolio project.  
+This repository presents a **marketing performance analytics dashboard** built as a **portfolio project**.  
 The dashboard focuses on tracking key marketing KPIs such as **ROAS, CTR, CPC, Conversion Rate, and revenue trends** using structured datasets and visual reporting.
 
-The project demonstrates practical analytics skills in **Power BI**, KPI design, and performance reporting using clear and reproducible analytics workflows.
+The project demonstrates practical analytics skills in **Power BI**, KPI design, and business-oriented performance reporting using clear and reproducible analytics workflows.
 
 ---
 
 ## Project Goal
 Marketing teams often need a clear and reliable way to:
-- Understand which channels perform best
-- See how advertising spend translates into business outcomes
+- Understand which marketing channels perform best
+- See how advertising spend translates into measurable outcomes
 - Monitor performance trends over time
 
 This project consolidates key performance metrics into a **single analytics dashboard** to support data-driven evaluation and reporting.
@@ -19,7 +19,7 @@ This project consolidates key performance metrics into a **single analytics dash
 ---
 
 ## Analytics Workflow Overview
-The project follows a simple and realistic analytics workflow commonly used in business environments:
+The project follows a simple, realistic analytics workflow commonly used in business environments:
 
 - Structured marketing data is prepared using synthetic datasets.
 - Key performance indicators (ROAS, CTR, CPC, Conversion Rate, revenue) are calculated.
@@ -50,7 +50,7 @@ This workflow reflects a practical analytics reporting system rather than a rese
 ## Files in This Repository
 - `Marketing_Dashboard_Quick.pdf` – Static dashboard overview  
 - `marketing_dashboard_summary.xlsx` – KPI summary tables  
-- `index.html` – Web-based dashboard preview  
+- `index.html` – Web-based dashboard demo preview  
 - `assets/` – Dashboard screenshots, data model diagram, and DAX measures  
 - `src/` – Supporting Python scripts used for data preparation and KPI summaries  
 - `DATA_DICTIONARY.md` – KPI definitions and calculation logic  
@@ -89,8 +89,8 @@ No real client, personal, or proprietary data is included.
 
 ## How to View
 - Open `Marketing_Dashboard_Quick.pdf` for a static overview  
-- Review `marketing_dashboard_summary.xlsx` for KPI tables  
-- Open `index.html` for a web-based dashboard preview  
+- Review `marketing_dashboard_summary.xlsx` to inspect KPI tables  
+- Open `index.html` for a web-based demo preview  
 
 ---
 
@@ -98,10 +98,10 @@ No real client, personal, or proprietary data is included.
 1. Clone this repository to your local machine.
 2. (Optional) Create a Python virtual environment.
 3. Install dependencies using `pip install -r requirements.txt`.
-4. Review the prepared synthetic datasets and KPI summaries.
-5. Open `marketing_dashboard_summary.xlsx` to inspect KPI calculations.
+4. Review the synthetic marketing datasets and KPI summaries.
+5. Inspect `marketing_dashboard_summary.xlsx` to verify KPI calculations.
 6. Open `Marketing_Dashboard_Quick.pdf` to view the dashboard layout.
-7. Open `index.html` for a web-based preview of the dashboard.
+7. Open `index.html` for a web-based demo preview.
 
 ---
 
@@ -123,10 +123,13 @@ Detailed KPI definitions and formulas are documented separately for clarity and 
 
 ---
 
-## Live Preview (Optional)
+## Live Demo (Portfolio Only)
 If enabled via GitHub Pages:
 
 🔗 https://khatantamir.github.io/gurvan-portfolio/
+
+> Note: This live page is a **portfolio demonstration only**.  
+> Pricing, purchase links, and integrations shown on the demo page are not active.
 
 ---
 
