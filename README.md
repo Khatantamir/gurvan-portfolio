@@ -1,63 +1,69 @@
-# 📊 Marketing Performance Dashboard (Power BI)
+# Automated Marketing Performance Data Pipeline
 
-This project analyzes marketing campaign performance across **Facebook Ads**, **Google Ads**, and **CRM sales** data to help businesses make data-driven advertising decisions.
+## Overview
+This project demonstrates a fully automated marketing analytics data pipeline designed to track performance, compute KPIs, and generate visual reports.
 
----
-
-##  Objective
-To compare marketing channels, optimize ad spend, and understand which campaigns generate the highest return on investment (ROAS).
+The entire workflow runs automatically using GitHub Actions and simulates real-world data engineering practices.
 
 ---
 
-##  Key Metrics Tracked
-| Metric | Description |
-|-------|-------------|
-| ROAS | Return on Ad Spend |
-| CTR | Click-Through Rate |
-| CPC | Cost Per Click |
-| CPM | Cost per 1000 Impressions |
-| Conversion Rate | Leads/Customers generated |
+## Problem
+Marketing teams often struggle to understand:
+- Which channels generate the most value
+- How ad spend translates into revenue
+- How performance changes over time
+
+Manual reporting is time-consuming and error-prone.
 
 ---
 
-##  Tools & Skills Used
-- **Power BI** (Dashboard & Visualization)
-- **DAX** (Custom Metrics & Measures)
-- **ETL / Data Cleaning**
-- **Data Modeling & Relationships**
-- **Marketing Analytics**
+## Solution
+This project automates the full analytics lifecycle:
+
+1. Generate raw marketing funnel data
+2. Transform data into clean KPI tables
+3. Generate visual performance reports
+4. Automatically commit outputs using CI/CD
+
+All steps run on demand or on a scheduled basis via GitHub Actions.
 
 ---
 
-##  Dashboard Preview
-(Screenshots will be added)
+## Automated Workflow (CI/CD)
+The pipeline is executed using **GitHub Actions**:
+
+- Manual trigger support
+- Scheduled weekly runs
+- Automatic commit of generated outputs
+
+### Pipeline Steps
+- `fetch_data.py` → Generate raw funnel data
+- `transform.py` → Compute KPIs (CTR, CVR, ROAS)
+- `make_charts.py` → Create charts and visual reports
 
 ---
 
-##  Data Sources
-- `facebook_ads_data.csv`
-- `google_ads_data.csv`
-- `crm_sales_data.csv`
+## Output Artifacts
+Each pipeline run produces:
 
-> Contains campaign spend, clicks, leads, conversions, and revenue data used to evaluate performance.
+- Raw datasets in `data/raw/`
+- Processed KPI tables in `data/processed/`
+- Visual reports in `reports/`
 
----
-
-##  Key Insights
-- Certain campaigns delivered **higher ROAS and conversion efficiency**
-- Facebook generated **lower CPC**, while Google delivered **higher final conversion value**
-- Balanced spend across channels improved overall revenue consistency
+These outputs are committed automatically by the workflow.
 
 ---
 
-##  What This Demonstrates
-This project shows my ability to:
-- Clean & join multi-channel marketing datasets
-- Build analytical dashboards that support business decisions
-- Communicate insights clearly and professionally
+## Why This Matters
+This project demonstrates:
+- Data engineering fundamentals
+- Automation and CI/CD pipelines
+- Reproducible analytics workflows
+- Business-focused KPI analysis
 
 ---
 
-###  If you’d like to work with me:
-**Email:** hhatnaa690@gmail.com  
-**Upwork:** https://www.upwork.com/freelancers/~  
+## National Importance Context (EB-NIW)
+Automated analytics pipelines like this improve efficiency, reduce operational costs, and enable data-driven decision-making.
+
+Such systems are critical for scaling small and mid-sized businesses and increasing economic productivity.
