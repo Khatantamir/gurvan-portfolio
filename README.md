@@ -1,6 +1,3 @@
-<img width="1896" height="910" alt="Marketing Performance Dashboard"
-src="https://github.com/user-attachments/assets/dc3f2453-cb16-48eb-831b-d97ad2a76c75" />
-
 # Marketing Performance Analytics Dashboard (Portfolio)
 
 ## Overview
